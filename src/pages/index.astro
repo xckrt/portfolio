@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug"
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hey there 👋</div>
+    <div class="text-5xl font-bold">I'm Alexey Kalinin</div>
+    <div class="text-3xl py-3 font-bold">Software Engineer | .NET & Android Developer</div>
+    <div class="py-2">
+      <text class="text-lg">
+        Добрый день.<br><b>Меня зовут Алексей Калинин и я являюсь Android и .NET Разработчиком.</b><br>Разрабатываю десктопные приложения на WPF и веб-сервисы на ASP.NET Core.<br>Люблю Linux и красивую архитектуру.
+      </text>
+    </div>
+     <div class="py-2">
+      <text class="text-lg">
+        Hello.<br><b>My name is Alexey Kalinin and i'm an Android and .NET developer.</b><br>I develop desktop applications in WPF and web services in ASP.NET Core.<br>I love Linux and beautiful architecture.
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn" href="https://vk.com/xckrt" target="_blank"> Let's connect!</a>
+      <a href="https://github.com/xckrt" target="_blank" class="btn btn-outline ml-5">
+        My Github
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+  </div>
+
+ <HorizontalCard
+  title="Cinema App (Android)"
+  img="/Kino.webp"
+  desc="Мобильное приложение для кинотеатра на Kotlin + Jetpack Compose."
+  url="#"
+  badge="Kotlin"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+  title="EKTS App (Android)"
+  img="/ECTS.webp"
+  desc="Мобильное приложение для просмотра расписания колледжа ЕКТС на Kotlin."
+  url="#"
+  badge="Kotlin"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="NextCloud"
+    img="/Nextcloud.webp"
+    desc="Личный сервер на ноутбуке с операционной системой Linux, доступный с любой точки мира."
+    url="#"
+    badge="C++"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Furniture_Site"
+    img="/Atelie.webp"
+    desc="Сайт для администрирования производства мебели и выполнения сотрудниками обязательств на ASP.NET"
+    url="#"
+    badge="ASP.NET"
+  />
+
+  
+</BaseLayout>

@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Резюме | xckrt" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">О себе</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Начинающий Software Engineer с фокусом на технологии Microsoft (.NET). Имею опыт разработки десктопных приложений на WPF и веб-сервисов на ASP.NET Core. 
+    Увлекаюсь системным администрированием (Linux/Ubuntu), настройкой веб-серверов и изучением мобильной разработки (Kotlin). 
+    Стремлюсь создавать чистую архитектуру и эффективные решения для бизнеса.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Образование</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Информационные системы и программирование"
+      subtitle="2022 — Наст. время, Екатеринбургский колледж транспортного строительства (ЕКТС), Екатеринбург"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Опыт и Проекты</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Fullstack .NET Developer (Учебный проект)"
+      subtitle="Дек 2025 — Наст. время | Система учета для мебельного салона"
+    >
+      Разработка комплексной системы управления заказами. 
+      <br>- Бэкенд: ASP.NET Core, работа с базой данных MS SQL.
+      <br>- Фронтенд: MVC / Razor Pages.
+      <br>- Проектирование схемы базы данных и оптимизация запросов.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Android Developer"
+      subtitle="Дек 2023 — Наст. время | Приложение для Кинотеатра (Курсовой проект) | Приложение 'ECTS' (Pet-проект)"
+    >
+      Создание нативного мобильного приложения для просмотра афиши и бронирования билетов.
+      <br>- Стек: Kotlin, Jetpack Compose.
+      <br>- Реализация современного UI/UX и работа с сетевыми запросами.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Linux System Administrator (HomeLab)"
+      subtitle="Ноя 2025 — Наст. время | Личный сервер"
+    >
+      Настройка и поддержка собственного Linux-сервера на базе Ubuntu.
+      <br>- Развертывание Nextcloud для облачного хранения данных.
+      <br>- Настройка веб-сервера Nginx, SSL сертификатов и VPN (Tailscale).
+      <br>- Работа с Docker и командной строкой Bash.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Навыки (Skills)</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>C#</li>
+    <li>.NET 8</li>
+    <li>WPF / XAML</li>
+    <li>ASP.NET Core</li>
+    <li>Entity Framework</li>
+    <li>MS SQL Server</li>
+    <li>Kotlin</li>
+    <li>Jetpack Compose</li>
+    <li>Git / GitHub</li>
+    <li>Linux (Ubuntu)</li>
+    <li>Nginx</li>
+    <li>Docker</li>
+    <li>Tailscale</li>
+    <li>Bash</li>
+  </ul>
+</BaseLayout>
