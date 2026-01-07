@@ -1,5 +1,6 @@
 ---
 import Analytics from '@vercel/analytics/astro'
+import SpeedInsights from '@vercel/speed-insights/astro'
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -38,5 +39,6 @@ const {
       </div>
       {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}
     </div>
+    <SpeedInsights />
   </body>
 </html>
