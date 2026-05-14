@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калинин Алексей — Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+</head>
+<body>
+
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="curR"></div>
+
+<nav>
+    <a class="nav-logo" href="#hero">AK<span>.</span></a>
+    <ul class="nav-links">
+        <li><a href="#about">Профиль</a></li>
+        <li><a href="#skills">Навыки</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#competencies">Компетенции</a></li>
+        <li><a href="#citizen">Активности</a></li>
+    </ul>
+</nav>
+
+<div class="sdots" id="sdots">
+    <button class="sdot on" data-s="hero"></button>
+    <button class="sdot" data-s="about"></button>
+    <button class="sdot" data-s="skills"></button>
+    <button class="sdot" data-s="projects"></button>
+    <button class="sdot" data-s="competencies"></button>
+    <button class="sdot" data-s="citizen"></button>
+</div>
+
+<section id="hero">
+    <canvas id="hero-3d"></canvas>
+    
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+        <p class="h-pre">// Портфолио студента &nbsp;·&nbsp; 2026</p>
+        <h1 class="h-name" data-text="КАЛИНИН&#10;АЛЕКСЕЙ">
+            КАЛИНИН<br><span class="ghost">АЛЕКСЕЙ</span>
+        </h1>
+        <p class="h-role">
+            <span class="typed" id="typed"></span><span class="blink">|</span>
+        </p>
+    </div>
+    <div class="h-scroll">
+        <div class="h-line"></div>
+        <span>Scroll to explore</span>
+    </div>
+</section>
+
+<section id="about">
+    <div class="sec-wrap">
+        <div class="inner">
+            <div class="rv-l">
+                <div class="img-frame">
+                    <img src="/img/avatar.jpg" alt="Калинин Алексей">
+                </div>
+            </div>
+            <div class="about-info">
+                <span class="snum rv">01 — Профиль</span>
+                <h2 class="stitle rv">Обо<br>Мне</h2>
+                <p class="bio rv">
+                    Студент 4-го курса колледжа. Специализируюсь на разработке архитектурных решений полного цикла — от проектирования баз данных до публикации мобильного приложения. Умею работать в команде и писать чистый, поддерживаемый код.
+                </p>
+                <ul class="meta rv">
+                    <li><span class="k">Специальность</span><span class="v">09.02.07 ИСиП</span></li>
+                    <li><span class="k">Группа</span><span class="v">ПР-41</span></li>
+                    <li><span class="k">Роль</span><span class="v">Fullstack / Mobile Dev</span></li>
+                    <li><span class="k">Статус</span><span class="v live">● Открыт к предложениям</span></li>
+                </ul>
+                <div class="socrow rv">
+                    <a href="https://github.com/xckrt" target="_blank" class="socbtn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://t.me/rxckrt" target="_blank" class="socbtn" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="mailto:zakforworks@gmail.com" class="socbtn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="sec-wrap">
+        <span class="snum rv">02 — Технологии</span>
+        <h2 class="stitle rv">Стек</h2>
+        <div class="grid">
+            <div class="sk-card rv" data-lv="90">
+                <div class="sk-ico"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <div class="sk-name">Kotlin / Jetpack Compose</div>
+                <div class="sk-sub">Android-разработка, MVVM, Coroutines, Room, FCM</div>
+                <div class="sk-bar"><div class="sk-fill"></div></div>
+            </div>
+            <div class="sk-card rv" data-lv="86">
+                <div class="sk-ico"><i class="fa-solid fa-code"></i></div>
+                <div class="sk-name">C# / ASP.NET Core</div>
+                <div class="sk-sub">WPF, REST API, Razor Pages, Identity, Middleware</div>
+                <div class="sk-bar"><div class="sk-fill"></div></div>
+            </div>
+            <div class="sk-card rv" data-lv="82">
+                <div class="sk-ico"><i class="fa-solid fa-database"></i></div>
+                <div class="sk-name">SQL / Entity Framework</div>
+                <div class="sk-sub">PostgreSQL, MSSQL, EF Core, Code-First, миграции</div>
+                <div class="sk-bar"><div class="sk-fill"></div></div>
+            </div>
+            <div class="sk-card rv" data-lv="74">
+                <div class="sk-ico"><i class="fa-brands fa-linux"></i></div>
+                <div class="sk-name">Linux / DevOps</div>
+                <div class="sk-sub">Arch Linux, скриптинг, настройка сетей (VLESS, OpenWrt)</div>
+                <div class="sk-bar"><div class="sk-fill"></div></div>
+            </div>
+            <div class="sk-card rv" data-lv="70">
+                <div class="sk-ico"><i class="fa-brands fa-git-alt"></i></div>
+                <div class="sk-name">Git / Version Control</div>
+                <div class="sk-sub">Ветвление, PR flow, Conventional Commits, CI/CD</div>
+                <div class="sk-bar"><div class="sk-fill"></div></div>
+            </div>
+            <div class="sk-card rv" data-lv="68">
+                <div class="sk-ico"><i class="fa-solid fa-diagram-project"></i></div>
+                <div class="sk-name">UML / Архитектура</div>
+                <div class="sk-sub">Диаграммы классов, прецедентов, MVC/MVVM паттерны</div>
+                <div class="sk-bar"><div class="sk-fill"></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="sec-wrap">
+        <span class="snum rv">03 — Работы</span>
+        <h2 class="stitle rv">Проекты</h2>
+        <div class="plist">
+            
+            <div class="prow rv" onclick="toggleP('pd1')">
+                <div class="prow-num">01</div>
+                <div class="prow-body">
+                    <div class="prow-title">Simple Coffee Internship</div>
+                    <div class="prow-desc">Производственная практика: анализ цифровой инфраструктуры</div>
+                </div>
+                <div class="prow-meta">
+                    <div class="prow-tech">Инфраструктура · Анализ</div>
+                    <div class="ptags">
+                        <span class="ptag">Практика</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pdetail" id="pd1">
+                <div class="pdetail-inner">
+                    <img src="/img/project3.png"  class="pdetail-img1" alt="Simple Coffee">
+                    <div>
+                        <p class="pdetail-text">
+                            Проект в рамках производственной практики в сети кофеен Simple Coffee. Анализ существующей цифровой инфраструктуры заведения, выявление узких мест и подготовка решений для оптимизации внутренних процессов.
+                        </p>
+                    </div>
+                    <div class="p-actions">
+                        <a href="https://github.com/xckrt/simplecoffee" target="_blank" class="git-link">
+                            <i class="fa-brands fa-github"></i> Исходный код
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prow rv" onclick="toggleP('pd2')">
+                <div class="prow-num">02</div>
+                <div class="prow-body">
+                    <div class="prow-title">Student Planner</div>
+                    <div class="prow-desc">Органайзер с мобильным клиентом и облачным бэкендом</div>
+                </div>
+                <div class="prow-meta">
+                    <div class="prow-tech">Kotlin · Compose · ASP.NET</div>
+                    <div class="ptags">
+                        <span class="ptag">ПК 1.6</span>
+                        <span class="ptag">ПК 11.4</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pdetail" id="pd2">
+                <div class="pdetail-inner">
+                    <img src="/img/project1.jpg" class="pdetail-img" alt="Student Planner">
+                    <div>
+                        <p class="pdetail-text">
+                            Комплексное решение для студентов: фронтенд на Kotlin (Jetpack Compose) и бэкенд на ASP.NET Core с PostgreSQL. Реализована синхронизация расписания, управление задачами и защита данных.
+                        </p>
+                        <div class="ptags2">
+                            <span class="ptag">PostgreSQL</span>
+                            <span class="ptag">REST API</span>
+                            <span class="ptag">MVVM</span>
+                        </div>
+                        <div class="p-actions">
+                            <a href="https://github.com/xckrt/StudentPlanner" target="_blank" class="git-link">
+                                <i class="fa-brands fa-github"></i> Исходный код
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prow rv" onclick="toggleP('pd3')">
+                <div class="prow-num">03</div>
+                <div class="prow-body">
+                    <div class="prow-title">Кино онлайн</div>
+                    <div class="prow-desc">Мобильное приложение для бронирования кинобилетов</div>
+                </div>
+                <div class="prow-meta">
+                    <div class="prow-tech">Kotlin · Compose · Firebase</div>
+                    <div class="ptags">
+                        <span class="ptag">ПК 1.6</span>
+                        <span class="ptag">ПК 11.4</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pdetail" id="pd3">
+                <div class="pdetail-inner">
+                    <img src="/img/project1.jpg" class="pdetail-img" alt="Cinema App">
+                    <div>
+                        <p class="pdetail-text">
+                            Android-приложение для бронирования билетов в кино. Реализована система авторизации через Firebase Auth, интерактивный выбор мест в зале, история заказов с локальным кэшированием через Room DB, push-уведомления.
+                        </p>
+                        <div class="ptags2">
+                            <span class="ptag">MVVM</span>
+                            <span class="ptag">Room DB</span>
+                            <span class="ptag">Coroutines</span>
+                            <span class="ptag">FCM</span>
+                        </div>
+                        <div class="p-actions">
+                            <a href="https://github.com/xckrt/kino" target="_blank" class="git-link">
+                                <i class="fa-brands fa-github"></i> Исходный код
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prow rv" onclick="toggleP('pd4')">
+                <div class="prow-num">04</div>
+                <div class="prow-body">
+                    <div class="prow-title">Furniture Store Web</div>
+                    <div class="prow-desc">Веб-платформа мебельного магазина с панелью администратора</div>
+                </div>
+                <div class="prow-meta">
+                    <div class="prow-tech">ASP.NET · MSSQL · EF Core</div>
+                    <div class="ptags">
+                        <span class="ptag">ПК 11.2</span>
+                        <span class="ptag">ДПК 2.1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pdetail" id="pd4">
+                <div class="pdetail-inner">
+                    <div>
+                        <p class="pdetail-text">
+                            Многоуровневое веб-приложение: каталог товаров, корзина, оформление заказа, полноценная панель администратора. Архитектура MVC, Code-First EF Core, ASP.NET Core Identity для авторизации.
+                        </p>
+                        <div class="ptags2">
+                            <span class="ptag">MVC</span>
+                            <span class="ptag">Razor Pages</span>
+                            <span class="ptag">EF Core</span>
+                            <span class="ptag">Identity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="competencies">
+    <div class="sec-wrap">
+        <span class="snum rv">04 — Матрица компетенций</span>
+        <h2 class="stitle rv">Компетенции</h2>
+
+        <div class="cfilt rv">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="cinput" placeholder="Поиск по коду или описанию…" oninput="filterC(this.value)">
+        </div>
+        <div class="ctabs rv" id="ctabs">
+            <button class="ctab on" onclick="setTab(this,'all')">Все</button>
+            <button class="ctab" onclick="setTab(this,'ОК')">ОК — Общие</button>
+            <button class="ctab" onclick="setTab(this,'ПК')">ПК — Профессиональные</button>
+            <button class="ctab" onclick="setTab(this,'ДПК')">ДПК — Дополнительные</button>
+        </div>
+        <div class="cgrid rv" id="cgrid"></div>
+    </div>
+</section>
+
+<section id="citizen">
+    <div class="sec-wrap">
+        <span class="snum rv">05 — Гражданская активность</span>
+        <h2 class="stitle rv">Внеучебная<br>деятельность</h2>
+
+        <div class="tline">
+            <div class="titem rv">
+                <div class="tdate">Май 2025</div>
+                <div class="ttitle">Волонтёрство на «Дне Города»</div>
+                <p class="tbody">Участвовал в организации городского мероприятия: координировал потоки людей, помогал на технической стойке, взаимодействовал с командой волонтёров в условиях высокой нагрузки.</p>
+                <div class="ttags">
+                    <span class="ttag">ОК 04</span>
+                    <span class="ttag">ОК 06</span>
+                </div>
+            </div>
+            <div class="titem yellow rv">
+                <div class="tdate">Декабрь 2024</div>
+                <div class="ttitle">Сбор макулатуры — Эко-акция</div>
+                <p class="tbody">Совместно с группой организовали сбор вторичного сырья в колледже. Собрано более 100 кг бумаги для последующей переработки.</p>
+                <div class="ttags">
+                    <span class="ttag">ОК 07</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="ftop">
+        <div class="fmega">Калинин<br><span>Алексей</span></div>
+        <div class="fright">
+            <p>Готов к стажировке и интересным проектам. Давайте создадим что-то крутое вместе.</p>
+            <div class="socrow">
+                <a href="https://github.com/xckrt" target="_blank" class="socbtn"><i class="fa-brands fa-github"></i></a>
+                <a href="https://t.me/rxckrt" target="_blank" class="socbtn"><i class="fa-brands fa-telegram"></i></a>
+                <a href="mailto:zakforworks@gmail.com" class="socbtn"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="fbot">
+        <span>© 2026 Калинин Алексей</span>
+        <span style="color:var(--dim)">Designed with intent, not templates</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
